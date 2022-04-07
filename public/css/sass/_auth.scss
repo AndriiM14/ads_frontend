@@ -1,0 +1,80 @@
+@use 'animations';
+@use 'colors';
+
+.auth-root {
+  padding-top: 10%;
+}
+
+.auth-content {
+  width: 45%;
+}
+
+.auth-forms {
+  width: 25%;
+}
+
+.auth-img {
+  width: 50%;
+  margin-left: 25%;
+  background: transparent;
+  transform: translatey(0px);
+  animation: levitation 4s ease-in-out infinite;
+}
+
+.auth-alternate-container {
+  background: transparent;
+  width: 100%;
+  margin-top: 18px;
+}
+
+.auth-alternate {
+  color: colors.$primary-900;
+  background: transparent;
+}
+
+@media screen and (max-width: 1400px) {
+  .auth-content {
+    width: 40%;
+  }
+
+  .auth-forms {
+    width: 30%;
+  }
+
+  .auth-img {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .auth-content {
+    width: 35%;
+  }
+
+  .auth-forms {
+    width: 40%;
+  }
+
+  .auth-img {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .auth-root {
+    flex-direction: column;
+  }
+
+  .auth-content {
+    width: 80%;
+  }
+
+  .auth-img {
+    margin-bottom: 18px;
+  }
+  
+  .auth-forms {
+    width: 80%;
+  }
+}
