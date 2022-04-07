@@ -19,6 +19,11 @@
   align-items: center;
 }
 
+.space-between {
+  justify-content: space-between;
+  align-items: center;
+}
+
 .title1 {
   font-style: normal;
   font-weight: 600;
@@ -108,6 +113,16 @@
   filter: brightness(85%);
 }
 
+.radio {
+  accent-color: #4D47C3;
+  transform: scale(1.5);
+}
+
+.radio-label {
+  margin-left: 5px;
+  margin-right: 32px;
+}
+
 @keyframes levitation {
   0% {
     transform: translatey(0px);
@@ -131,6 +146,10 @@
   width: 25%;
 }
 
+.auth-role-container {
+  margin-bottom: 19px;
+}
+
 .auth-img {
   width: 50%;
   margin-left: 25%;
@@ -148,6 +167,11 @@
 .auth-alternate {
   color: #4D47C3;
   background: transparent;
+  text-decoration: none;
+}
+
+.auth-alternate:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1400px) {

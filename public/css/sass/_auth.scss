@@ -13,6 +13,10 @@
   width: 25%;
 }
 
+.auth-role-container {
+  margin-bottom: 19px;
+}
+
 .auth-img {
   width: 50%;
   margin-left: 25%;
@@ -30,6 +34,11 @@
 .auth-alternate {
   color: colors.$primary-900;
   background: transparent;
+  text-decoration: none;
+}
+
+.auth-alternate:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1400px) {

@@ -47,3 +47,13 @@
   cursor: pointer;
   filter: brightness(85%);
 }
+
+.radio {
+  accent-color: colors.$primary-900;
+  transform: scale(1.5);
+}
+
+.radio-label {
+  margin-left: 5px;
+  margin-right: 32px;
+}
