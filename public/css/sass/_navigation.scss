@@ -1,11 +1,8 @@
 @use 'colors';
 
-.navigation {
+%side-bar {
   position: fixed;
   overflow: auto;
-  left: 0;
-  top: 0;
-  width: 265px;
   height: 100%;
   background: colors.$menu-bg;
   color: colors.$gray;
@@ -17,6 +14,24 @@
   font-weight: 400;
   font-size: 16px;
   box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+}
+
+.navigation {
+  @extend %side-bar;
+  left: 0;
+  top: 0;
+  width: 265px;
+}
+
+.filters {
+  @extend %side-bar;
+  right: 0;
+  top: 0;
+  width: 40vh;
+  padding: 24px;
+  color: colors.$white;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .item {

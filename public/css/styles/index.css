@@ -249,14 +249,15 @@
   }
 }
 .ads-container {
+  width: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  padding-left: 32px;
+  padding-top: 10px;
+  padding-left: 8vh;
 }
 
 .card {
-  width: 45%;
+  width: 100vh;
   border-width: 1px;
   border-radius: 20px;
   background: #FFFFFF;
@@ -307,12 +308,9 @@
   margin-bottom: 14px;
 }
 
-.navigation {
+.filters, .navigation {
   position: fixed;
   overflow: auto;
-  left: 0;
-  top: 0;
-  width: 265px;
   height: 100%;
   background: #121127;
   color: #B5B5B5;
@@ -324,6 +322,22 @@
   font-weight: 400;
   font-size: 16px;
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.navigation {
+  left: 0;
+  top: 0;
+  width: 265px;
+}
+
+.filters {
+  right: 0;
+  top: 0;
+  width: 40vh;
+  padding: 24px;
+  color: #FFFFFF;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .item {
