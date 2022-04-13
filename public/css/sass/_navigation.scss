@@ -1,0 +1,40 @@
+@use 'colors';
+
+.navigation {
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 265px;
+  height: 100%;
+  background: colors.$menu-bg;
+  color: colors.$gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+}
+
+.item {
+  width: 98%;
+  justify-content: flex-start;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  align-items: center;
+  transition: 0.3s ease-in;
+  transform: translateX();
+}
+
+.item:hover {
+  background-color: rgba($color: colors.$white, $alpha: 0.2);
+  border-left: 3px solid colors.$primary-100;
+  cursor: pointer;
+  color: colors.$primary-100
+}
+
+.icon {
+  font-size: 23px;
+  margin-right: 24px;
+  margin-left: 29px;
+}
