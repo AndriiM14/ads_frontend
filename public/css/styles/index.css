@@ -136,6 +136,28 @@
   margin-right: 32px;
 }
 
+.link {
+  text-decoration: none;
+  color: #4D47C3;
+  display: inline-block;
+  position: relative;
+}
+.link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  height: 2px;
+  margin: -5px 0;
+  left: 0;
+  background-color: #4D47C3;
+  transition: all 0.2s ease-in 0s;
+}
+.link:hover:after {
+  width: 100%;
+}
+
 @keyframes levitation {
   0% {
     transform: translatey(0px);
@@ -180,16 +202,6 @@
   background: transparent;
   width: 100%;
   margin-top: 18px;
-}
-
-.auth-alternate {
-  color: #4D47C3;
-  background: transparent;
-  text-decoration: none;
-}
-
-.auth-alternate:hover {
-  text-decoration: underline;
 }
 
 @media screen and (max-width: 1400px) {
@@ -237,8 +249,10 @@
   }
 }
 .ads-container {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-  justify-content: space-between;
+  padding-left: 32px;
 }
 
 .card {
@@ -285,6 +299,7 @@
 .advr-text {
   color: #000000;
   text-align: justify;
+  padding-bottom: 24px;
 }
 
 .advr-info {
@@ -304,7 +319,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
 }
 
@@ -325,10 +343,38 @@
   color: #F0EFFF;
 }
 
-.icon {
+i.icon {
   font-size: 23px;
   margin-right: 24px;
   margin-left: 29px;
+}
+
+.logout {
+  width: 260px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  justify-content: flex-start;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  align-items: center;
+}
+
+i.logo-icon {
+  color: #F0EFFF;
+  font-size: 42px;
+}
+
+.logo-title {
+  color: #F0EFFF;
+  font-size: 19px;
 }
 
 * {
@@ -338,7 +384,7 @@
 }
 
 .root {
-  padding-left: 300px;
+  padding-left: 265px;
   background-color: #F0EFFF;
 }
 

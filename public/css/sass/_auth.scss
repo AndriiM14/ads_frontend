@@ -36,16 +36,6 @@
   margin-top: 18px;
 }
 
-.auth-alternate {
-  color: colors.$primary-900;
-  background: transparent;
-  text-decoration: none;
-}
-
-.auth-alternate:hover {
-  text-decoration: underline;
-}
-
 @media screen and (max-width: 1400px) {
   .auth-content {
     width: 40%;

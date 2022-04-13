@@ -1,8 +1,10 @@
 @use 'colors';
 
 .ads-container {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-  justify-content: space-between;
+  padding-left: 32px;
 }
 
 .card {
@@ -49,6 +51,7 @@
 .advr-text {
   color: colors.$black;
   text-align: justify;
+  padding-bottom: 24px;
 }
 
 .advr-info {
