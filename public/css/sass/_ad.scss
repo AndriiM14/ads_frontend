@@ -1,0 +1,56 @@
+@use 'colors';
+
+.ads-container {
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.card {
+  width: 32%;
+  border-width: 1px;
+  border-radius: 20px;
+  background: colors.$white;
+  padding: 0px;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+}
+
+.advr-img {
+  width: 45%;
+  background-image: url('../../img/advr.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.tag {
+  width: 72px;
+  text-align: center;
+  background: colors.$primary-100;
+  opacity: 0.8;
+  border-radius: 20px;
+  padding: 5px;
+  margin-top: 24px;
+  margin-left: 10px;
+  color: colors.$primary-900;
+}
+
+.advr-content {
+  width: 55%;
+  padding: 24px 32px 32px 24px;
+}
+
+.advr-text {
+  color: colors.$black;
+  text-align: justify;
+}
+
+.advr-info {
+  margin-top: 5px;
+  margin-bottom: 14px;
+}

@@ -46,11 +46,24 @@
   margin-bottom: 28px;
 }
 
+.title4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+
 .body {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  color: #B5B5B5;
+}
+
+.info {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
   color: #B5B5B5;
 }
 
@@ -218,10 +231,64 @@
     width: 80%;
   }
 }
+.ads-container {
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.card {
+  width: 32%;
+  border-width: 1px;
+  border-radius: 20px;
+  background: #FFFFFF;
+  padding: 0px;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.advr-img {
+  width: 45%;
+  background-image: url("../../img/advr.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.tag {
+  width: 72px;
+  text-align: center;
+  background: #F0EFFF;
+  opacity: 0.8;
+  border-radius: 20px;
+  padding: 5px;
+  margin-top: 24px;
+  margin-left: 10px;
+  color: #4D47C3;
+}
+
+.advr-content {
+  width: 55%;
+  padding: 24px 32px 32px 24px;
+}
+
+.advr-text {
+  color: #000000;
+  text-align: justify;
+}
+
+.advr-info {
+  margin-top: 5px;
+  margin-bottom: 14px;
+}
+
 * {
   margin: 0;
   padding: 0;
-  background-color: #FFFFFF;
   background-image: url("../../img/background_pattern.svg");
   background-attachment: fixed;
   background-position: center;
