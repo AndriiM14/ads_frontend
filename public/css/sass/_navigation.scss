@@ -1,86 +1,135 @@
 @use 'colors';
 
-%side-bar {
+%horizontal-bar {
   position: fixed;
-  overflow: auto;
-  height: 100%;
-  background: colors.$menu-bg;
-  color: colors.$gray;
+  width: 100%;
+  height: 69px;
+  background: colors.$white;
+  color: colors.$black;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: stretch;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2);
+  border-bottom: 1px solid colors.$gray;
 }
 
 .navigation {
-  @extend %side-bar;
-  left: 0;
-  top: 0;
-  width: 265px;
+  @extend %horizontal-bar;
+  top: 0px;
+  left: 0px;
 }
 
-.filters {
-  @extend %side-bar;
-  right: 0;
-  top: 0;
-  width: 40vh;
-  padding: 24px;
-  color: colors.$white;
-  justify-content: flex-start;
-  align-items: flex-start;
+.items {
+  flex: 1;
 }
 
 .item {
-  width: 98%;
-  justify-content: flex-start;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  align-items: center;
-  transition: 0.3s ease-in;
-  transform: translateX();
-}
+  margin-right: 48px;
 
-.item:hover {
-  background-color: rgba($color: colors.$white, $alpha: 0.2);
-  border-left: 3px solid colors.$primary-100;
-  cursor: pointer;
-  color: colors.$primary-100
+  :hover {
+    cursor: pointer;
+    color: colors.$primary-900;
+  }
 }
 
 i.icon {
-  font-size: 23px;
-  margin-right: 24px;
-  margin-left: 29px;
-}
-
-.logout {
-  width: 260px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  font-size: 32px;
 }
 
 .logo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 98%;
-  justify-content: flex-start;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  flex: 1;
+  justify-content: flex-end;
   align-items: center;
+
+  a {
+    margin-right: 0;
+    align-items: center;
+  }
+}
+
+.nav-input {
+  width: 300px;
+  margin-left: 128px;
+  margin-right: 128px;
+}
+
+.nav-search {
+  height: 24px;
+  border: 1px solid colors.$primary-600;
+  margin-bottom: 0px;
 }
 
 i.logo-icon {
-  color: colors.$primary-100;
   font-size: 42px;
+  margin-right: 12px;
 }
 
 .logo-title {
-  color: colors.$primary-100;
   font-size: 19px;
+}
+
+@media screen and (max-width: 960px) {
+  .navigation {
+    justify-content: space-between;
+
+    .nav-input {
+      width: 200px;
+      margin-right: 32px;
+      margin-left: 32px;
+    }
+
+    .logo {
+      justify-content: flex-start;
+      padding-left: 12px;
+    }
+
+    .items {
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav-input {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navigation {
+    top: auto;
+    bottom: 0;
+    border-bottom: 0px;
+    border-top: 1px solid colors.$gray;
+  }
+
+  .items {
+    width: 100%;
+
+    .item {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0;
+    }
+  }
+
+  .logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 49px;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2);
+    border-bottom: 1px solid colors.$gray;
+
+    .item {
+      margin: auto;
+    }
+  }
 }
