@@ -15,5 +15,22 @@
 }
 
 .root {
+  height: 100vh;
   background-color: colors.$primary-100;
+  padding-top: 69px;
+}
+
+.separator {
+  height: 69px;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .root {
+    padding-top: 49px;
+  }
+
+  .separator {
+    display: block;
+  }
 }

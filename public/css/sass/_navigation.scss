@@ -4,6 +4,7 @@
   position: fixed;
   width: 100%;
   height: 69px;
+  overflow: hidden;
   background: colors.$white;
   color: colors.$black;
   display: flex;
@@ -37,7 +38,7 @@
 }
 
 i.icon {
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .logo {
@@ -123,6 +124,8 @@ i.logo-icon {
     position: fixed;
     top: 0;
     left: 0;
+    overflow: hidden;
+    background: colors.$white;
     width: 100%;
     height: 49px;
     box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2);

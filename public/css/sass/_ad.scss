@@ -1,61 +1,94 @@
 @use 'colors';
 
-.ads-container {
-  width: 100vh;
+.advs {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
-  padding-left: 8vh;
+  align-items: center;
+  justify-content: center;
 }
 
-.card {
-  width: 100vh;
-  border-width: 1px;
-  border-radius: 20px;
+.adv-container {
+  width: 800px;
+  border: 1px solid colors.$gray;
+  border-radius: 8px;
   background: colors.$white;
-  padding: 0px;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-  margin-bottom: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2);
+
+  .body {
+    color: colors.$black;
+  }
 }
 
-.advr-img {
-  width: 45%;
-  background-image: url('../../img/advr.jpg');
-  background-attachment: scroll;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.tag {
-  width: 72px;
-  text-align: center;
+.adv-header {
   background: colors.$primary-100;
-  opacity: 0.8;
-  border-radius: 20px;
-  padding: 2px;
-  margin-top: 24px;
-  margin-left: 10px;
-  color: colors.$primary-900;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 10px;
+  align-items: center;
 }
 
-.advr-content {
-  width: 55%;
-  padding: 24px;
+.adv-avatar {
+  width: 45px;
+  height: 45px;
+  margin-right: 12px;
+  border-radius: 50px;
 }
 
-.advr-text {
-  color: colors.$black;
-  text-align: justify;
-  padding-bottom: 24px;
+.adv-img {
+  width: 100%;
+  border-top: 1px solid colors.$gray;
+  border-bottom: 1px solid colors.$gray;
 }
 
-.advr-info {
+.adv-content {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 10px;
+}
+
+.adv-location {
+  margin-bottom: 10px;
+}
+
+.location-icon {
+  font-size: 32px;
+  margin-right: 12px;
+}
+
+.adv-date {
   margin-top: 5px;
-  margin-bottom: 14px;
+}
+
+@media screen and (max-width: 900px) {
+  .adv-container {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .adv-container {
+    width: 100%;
+    border-radius: 0px;
+    border-width: 0;
+
+    .title4 {
+      font-size: 16px;
+    }
+
+    .body {
+      font-size: 14px;
+    }
+  }
+
+  .adv-header {
+    background: colors.$white;
+  }
+
+  .adv-avatar {
+    width: 30px;
+    height: 30px;
+  }
 }
