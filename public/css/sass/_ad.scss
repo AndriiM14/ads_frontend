@@ -35,6 +35,7 @@
   height: 45px;
   margin-right: 12px;
   border-radius: 50px;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.4);
 }
 
 .adv-img {
@@ -62,9 +63,120 @@
   margin-top: 5px;
 }
 
+.advs-prev {
+  width: 25%;
+  height: 100vh;
+  background: colors.$white;
+  border-right: 1px solid colors.$gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.advs-prev-container {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid colors.$gray;
+
+  :hover {
+    cursor: pointer;
+    background: colors.$primary-100;
+  }
+}
+
+.adv-prev-avatar {
+  margin-left: 10px;
+}
+
+.advs-prev-content {
+  padding-right: 10px;
+}
+
+.edit-container {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.edit-avatar {
+  width: 72px;
+  height: 72px;
+  margin: 24px;
+}
+
+.edit-title {
+  width: 45%;
+  height: 24px;
+  margin-top: 24px;
+  margin-left: 24px;
+}
+
+.edit-zone {
+  width: 100%;
+}
+
+.edit-area {
+  width: 85%;
+  margin-top: 24px;
+  height: auto;
+  resize: vertical;
+  border-bottom: 1px solid colors.$primary-900;
+}
+
+.attach {
+  margin-left: 128px;
+}
+
+.attach:hover {
+  cursor: pointer;
+  color: colors.$primary-900;
+}
+
+.edit-bottom {
+  width: 95%;
+}
+
+.edit-buttons {
+  width: 30%;
+}
+
+.edit-button {
+  margin-right: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+}
+
+@media screen and (max-width: 1300px) {
+  .advs-prev {
+    width: 40%;
+  }
+  .advs-prev-container {
+    .info {
+      font-size: 12px;
+    }
+  }
+}
+
 @media screen and (max-width: 900px) {
   .adv-container {
     width: 85%;
+  }
+
+  .advs-prev-container {
+    .title5 {
+      font-size: 16px;
+    }
+  }
+
+  .edit-buttons {
+    width: 45%;
   }
 }
 
@@ -90,5 +202,27 @@
   .adv-avatar {
     width: 30px;
     height: 30px;
+  }
+
+  .edit-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .edit-root {
+    flex-direction: column-reverse;
+  }
+
+  .edit-container {
+    width: 100%;
+  }
+
+  .advs-prev{
+    width: 100%;
+    height: auto;
+    border: none;
+    background: transparent;
+    border-top: 1px solid colors.$gray;
+    margin-top: 32px;
   }
 }

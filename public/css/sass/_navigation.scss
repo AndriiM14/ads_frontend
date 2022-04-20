@@ -29,12 +29,17 @@
 }
 
 .item {
+  color: colors.$black;
   margin-right: 48px;
 
   :hover {
     cursor: pointer;
     color: colors.$primary-900;
   }
+}
+
+.selected {
+  color: colors.$primary-900;
 }
 
 i.icon {
@@ -60,12 +65,11 @@ i.icon {
 
 .nav-search {
   height: 24px;
-  border: 1px solid colors.$primary-600;
   margin-bottom: 0px;
 }
 
 i.logo-icon {
-  font-size: 42px;
+  font-size: 32px;
   margin-right: 12px;
 }
 

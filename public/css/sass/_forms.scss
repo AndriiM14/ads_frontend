@@ -1,5 +1,26 @@
 @use 'colors';
 
+%button {
+  width: 100%;
+  height: 59;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 9px;
+  border-color: transparent;
+  padding: 18px 0px 17px 0px;
+  margin-top: 9px;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.4);
+}
+
+%button:hover {
+  cursor: pointer;
+  filter: brightness(85%);
+}
+
 .text-field {
   width: 100%;
   border-radius: 8px;
@@ -25,27 +46,37 @@
   color: colors.$primary-600;
 }
 
-.primary-button {
+.text-area {
   width: 100%;
-  height: 59;
-  align-items: center;
-  justify-content: center;
-  color: colors.$white;
+  background: colors.$primary-100;
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  background: colors.$primary-900;
-  border-radius: 9px;
-  border-color: transparent;
-  padding: 18px 0px 17px 0px;
-  margin-top: 9px;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: colors.$black;
+  outline: none;
+  border: none;
+  resize: none;
 }
 
-.primary-button:hover {
-  cursor: pointer;
-  filter: brightness(85%);
+.text-area:focus {
+  border-bottom: 3px solid colors.$primary-900;
+}
+
+.text-area::placeholder {
+  color: colors.$primary-600;
+}
+
+.primary-button {
+  @extend %button;
+  color: colors.$white;
+  background: colors.$primary-900;
+}
+
+.secondary-button {
+  @extend %button;
+  color: colors.$primary-900;
+  border: 1px solid colors.$primary-900;
 }
 
 .radio {
