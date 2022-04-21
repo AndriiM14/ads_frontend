@@ -153,6 +153,36 @@
   height: 45px;
 }
 
+.adv-full-container {
+  width: 50%;
+  display: flex;
+  border: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+
+  .body {
+    color: colors.$black;
+    text-align: justify;
+  }
+
+  .adv-header {
+    width: 100%;
+    background: transparent;
+
+    .adv-avatar {
+      margin-top: 5px;
+    }
+  }
+
+  .title4 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 24px;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .advs-prev {
     width: 40%;
@@ -161,6 +191,10 @@
     .info {
       font-size: 12px;
     }
+  }
+
+  .adv-full-container {
+    width: 70%;
   }
 }
 
@@ -177,6 +211,10 @@
 
   .edit-buttons {
     width: 45%;
+  }
+
+  .adv-full-container {
+    width: 80%;
   }
 }
 
@@ -224,5 +262,13 @@
     background: transparent;
     border-top: 1px solid colors.$gray;
     margin-top: 32px;
+  }
+
+  .adv-full-container {
+    width: 100%;
+
+    .adv-header {
+      width: 95%;
+    }
   }
 }
