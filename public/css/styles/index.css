@@ -726,6 +726,19 @@ i.logo-icon {
     box-shadow: none;
   }
 }
+.admin-edit {
+  margin: 12px;
+}
+
+.delete-user {
+  margin-right: 10px;
+  color: #000000;
+}
+
+.delete-user:hover {
+  color: #FF4C4C !important;
+}
+
 * {
   margin: 0;
   padding: 0;

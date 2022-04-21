@@ -1,0 +1,14 @@
+@use 'colors';
+
+.admin-edit {
+    margin: 12px;
+}
+
+.delete-user {
+    margin-right: 10px;
+    color: colors.$black;
+}
+
+.delete-user:hover {
+    color: colors.$red !important;
+}
