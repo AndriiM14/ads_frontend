@@ -1,0 +1,54 @@
+@use 'colors';
+
+.profile-container {
+    width: 50%;
+    border: 1px solid colors.$primary-900;
+    border-radius: 20px;
+    margin-top: 12px;
+    background-color: colors.$white;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2);
+}
+
+.profile-header {
+    padding: 12px;
+    padding-left: 5%;
+    padding-right: 5%;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: colors.$primary-100;
+    border-bottom: 1px solid colors.$gray;
+}
+
+.profile-content {
+    padding: 12px;
+}
+
+.profile-button {
+    width: 45%;
+}
+
+.log-out {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 1600px) {
+    .profile-container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .profile-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .profile-container {
+        width: 100%;
+        border: none;
+        background: none;
+        box-shadow: none;
+    }
+}
