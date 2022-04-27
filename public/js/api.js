@@ -7,13 +7,12 @@ export const auth = (data) => fetch(`${HOST}/auth`, {
   body: JSON.stringify(data)
 });
 
-export const register = (data) => fetch(`${HOST}/registration`, {
-  method: "POST",
-  headers: HEADERS,
-  body: JSON.stringify(data)
+export const getAds = () => fetch(`${HOST}/advertisement`, {
+  method: "GET",
+  headers: formAuthHeaders()
 });
 
-export const getAds = () => fetch(`${HOST}/advertisement`, {
+export const getUser = () => fetch(`${HOST}/user`, {
   method: "GET",
   headers: formAuthHeaders()
 });

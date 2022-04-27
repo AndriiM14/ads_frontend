@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="module" src="./js/screens/profile.js"></script>
   <title>Ads</title>
 </head>
 <body>
@@ -31,7 +32,7 @@
         <div class="row space-between profile-header">
           <div class="row center">
             <img class="adv-avatar" src="./img/avatar.png" alt="avatar img">
-            <h4 class="title4">username</h4>
+            <h4 id="usr-title" class="title4">username</h4>
           </div>
           <a href="./login.html" class="item log-out">
             <i class="fa fa-sign-out icon"></i>
@@ -39,9 +40,11 @@
         </div>
         <div class="profile-content">
           <input class="text-field" type="email" id="email" name="email" placeholder="Enter email" value="youremail@email.com">
-          <input class="text-field" type="text" id="username" name="username" placeholder="Enter username" value="username">
+          <input class="text-field" type="text" id="firstname" name="firstname" placeholder="Enter first name" value="firstname">
+          <input class="text-field" type="text" id="lastname" name="lastname" placeholder="Enter last name" value="lastname">
+          <input class="text-field" type="tel" id="phone" name="phone" placeholder="Enter phone number" value="+0000000000">
           <input class="text-field" type="password" id="password" name="password" placeholder="Change password">
-          <input class="text-field" type="password" id="password" name="password" placeholder="Confirm Password">
+          <input class="text-field" type="password" id="confirm-password" name="password" placeholder="Confirm Password">
           <div class="row center space-between">
             <button class="secondary-button profile-button" type="submit">Cancel</button>
             <button class="primary-button profile-button" type="submit">Confirm</button>
