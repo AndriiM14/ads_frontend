@@ -16,7 +16,8 @@ const handleLogin = () => {
       if (!res.ok) {
         return;
       }
-      window.localStorage.setItem("token", hashAuthData(email, password));
+
+      window.localStorage.setItem("token", hashAuthData({email, password}));
       window.location.href = "index.html";
     });
 };
