@@ -8,8 +8,8 @@ const IDS = {
 };
 
 const handleLogin = () => {
-  const email = document.getElementById(IDS["EMAIL"]).value;
-  const password = document.getElementById(IDS["PASSWORD"]).value;
+  const email = document.getElementById(IDS.EMAIL).value;
+  const password = document.getElementById(IDS.PASSWORD).value;
 
   auth({email, password})
     .then(res => {
