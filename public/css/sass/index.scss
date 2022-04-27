@@ -1,0 +1,38 @@
+@use 'colors';
+@use 'layout';
+@use 'typography';
+@use 'forms';
+@use 'auth';
+@use 'ad';
+@use 'navigation';
+@use 'profile';
+@use 'admin';
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.root {
+  height: 100vh;
+  background-color: colors.$primary-100;
+  padding-top: 69px;
+}
+
+.separator {
+  height: 69px;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .root {
+    padding-top: 49px;
+  }
+
+  .separator {
+    display: block;
+  }
+}

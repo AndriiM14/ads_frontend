@@ -1,0 +1,62 @@
+@use 'colors';
+
+.title1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 75px;
+}
+
+.title2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 52px;
+}
+
+.title3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 45px;
+  margin-bottom: 28px;
+}
+
+.title4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.title5 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.body {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: colors.$gray;
+}
+
+.info {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: colors.$gray;
+}
+
+@media screen and (max-width: 900px) {
+  .title1 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .title2 {
+    font-size: 21px;
+    line-height: 32px;
+  }
+}
