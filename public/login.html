@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles/index.css">
+  <script type="module" src="./js/screens/login.js"></script>
   <title>Login</title>
 </head>
 <body>
@@ -16,14 +17,12 @@
     </div>
     <div class="auth-forms" class="column left">
       <h3 class="title3">Log in</h3>
-      <form action="./index.html">
-        <input class="text-field" type="email" id="email" name="email" placeholder="Enter email">
-        <input class="text-field" type="password" id="password" name="password" placeholder="Password">
-        <button class="primary-button" type="submit">Login</button>
-        <div class="column center auth-alternate-container">
-          <p class="body">If u don't have an account. <a href="./register.html" class="link">Register.</a></p>
-        </div>
-      </form>
+      <input class="text-field" type="email" id="email-inpt" name="email" placeholder="Enter email">
+      <input class="text-field" type="password" id="password-inpt" name="password" placeholder="Password">
+      <button id="login-btn" class="primary-button">Login</button>
+      <div class="column center auth-alternate-container">
+        <p class="body">If u don't have an account. <a href="./register.html" class="link">Register.</a></p>
+      </div>
     </div>
   </div>
 </body>

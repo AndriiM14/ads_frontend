@@ -1,19 +1,19 @@
-import { HOST, HEADERS } from 'config.js';
-import { formAuthHeaders } from 'utils.js';
+import { HOST, HEADERS } from './config.js';
+import { formAuthHeaders } from './utils.js';
 
-const auth = (data) => fetch(`${HOST}/auth`, {
+export const auth = (data) => fetch(`${HOST}/auth`, {
   method: "POST",
   headers: HEADERS,
-  data: data
+  body: JSON.stringify(data)
 });
 
-const register = (data) => fetch(`${HOST}/registration`, {
+export const register = (data) => fetch(`${HOST}/registration`, {
   method: "POST",
   headers: HEADERS,
-  data: data
+  body: JSON.stringify(data)
 });
 
-const getAds = () => fetch(`${HOST}/advertisement`, {
+export const getAds = () => fetch(`${HOST}/advertisement`, {
   method: "GET",
   headers: formAuthHeaders()
 });

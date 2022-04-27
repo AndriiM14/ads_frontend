@@ -1,6 +1,7 @@
 {
   "name": "ads_frontend",
   "version": "1.0.0",
+  "type": "module",
   "description": "Fronted project for my web-dev uni course",
   "scripts": {
     "test": "test"

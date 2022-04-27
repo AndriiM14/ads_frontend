@@ -1,4 +1,4 @@
-import { HEADERS } from 'config.js';
+import { HEADERS } from './config.js';
 
 export const hashAuthData = ({email, password}) => `Basic ${btoa(`${email}:${password}`)}`;
 
