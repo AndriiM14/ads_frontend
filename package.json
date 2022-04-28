@@ -4,7 +4,13 @@
   "type": "module",
   "description": "Fronted project for my web-dev uni course",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "lint": "eslint **/*.js --ignore-pattern node_modules/"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1"
   },
   "repository": {
     "type": "git",
