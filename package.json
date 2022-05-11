@@ -38,7 +38,13 @@
   },
   "homepage": "https://github.com/AndriiM14/ads_frontend#readme",
   "dependencies": {
+    "axios": "^0.27.2",
+    "font-awesome": "^4.7.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0"
   }
 }
