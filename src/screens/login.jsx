@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../public/sass/index.scss';
+import { Link } from 'react-router-dom';
 import guyImgSrc from '../../public/img/guy_img.svg';
 
 function Login() {
@@ -19,7 +20,7 @@ function Login() {
                     <p className="body">
                         If u don&apos;t have an account.
                         {' '}
-                        <a href="./register.html" className="link">Register.</a>
+                        <Link to="/registration" className="link">Register.</Link>
                     </p>
                 </div>
             </div>
