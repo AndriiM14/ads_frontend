@@ -1,16 +1,13 @@
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { ToastContainer } from 'react-toastify';
+import RootNav from '../navigation/root';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        navigate('/app');
-    }, []);
-
     return (
         <div>
-            <h1>Hello React</h1>
+            <RootNav />
+            <ToastContainer theme="dark" />
         </div>
     );
 }
