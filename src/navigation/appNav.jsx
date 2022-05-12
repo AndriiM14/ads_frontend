@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import '../sass/index.scss';
+import '../../public/sass/index.scss';
 import 'font-awesome/css/font-awesome.min.css';
 
 function AppNav() {

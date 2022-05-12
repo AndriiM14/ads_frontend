@@ -5,7 +5,7 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        navigate('/app');
+        navigate('/login');
     }, []);
 
     return (
