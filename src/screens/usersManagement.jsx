@@ -24,7 +24,17 @@ function UsersManagement() {
 
     const handleSelect = (user) => setSelectedUser(user);
 
-    const renderUserItem = (item) => <UserItem key={item.id} data={item} onSelect={handleSelect} onDelete={loadUsers} />;
+    const handleUserChanged = () => {
+        loadUsers();
+    };
+
+    const handleCancelChange = () => {
+        setSelectedUser(null);
+    };
+
+    const renderUserItem = (item) => (
+        <UserItem key={item.id} data={item} onSelect={handleSelect} onDelete={loadUsers} />
+    );
 
     return (
         <div>
@@ -33,7 +43,13 @@ function UsersManagement() {
                     {users.map(renderUserItem)}
                 </div>
                 <div className="profile-container admin-edit">
-                    {selectedUser && <EditUser />}
+                    {selectedUser && (
+                        <EditUser
+                            data={selectedUser}
+                            onConfirm={handleUserChanged}
+                            onCancel={handleCancelChange}
+                        />
+                    )}
                 </div>
             </div>
             <div className="separator" />
