@@ -1,16 +1,36 @@
 {
   "name": "ads_frontend",
   "version": "1.0.0",
-  "type": "module",
   "description": "Fronted project for my web-dev uni course",
   "scripts": {
+    "start": "webpack serve  --hot --open --port 8000",
     "test": "test",
-    "lint": "eslint **/*.js --ignore-pattern node_modules/"
+    "lint": "eslint ./src/**/*.jsx --ignore-pattern node_modules/",
+    "lint:fix": "eslint ./src/**/*.jsx --fix --ignore-pattern node_modules/"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.1"
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/runtime": "^7.17.9",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "dotenv": "^16.0.1",
+    "dotenv-webpack": "^7.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
   },
   "repository": {
     "type": "git",
@@ -21,5 +41,18 @@
   "bugs": {
     "url": "https://github.com/AndriiM14/ads_frontend/issues"
   },
-  "homepage": "https://github.com/AndriiM14/ads_frontend#readme"
+  "homepage": "https://github.com/AndriiM14/ads_frontend#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "font-awesome": "^4.7.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-ripples": "^2.2.1",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "react-toastify": "^9.0.1",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0"
+  }
 }
