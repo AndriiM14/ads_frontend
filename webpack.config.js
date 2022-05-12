@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/index.jsx',
     output: {
         filename: 'bundle.[hash].js',
         path: path.resolve(__dirname, 'dist'),
@@ -29,12 +29,12 @@ module.exports = {
                 use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.scss$/, 
+                test: /\.scss$/,
                 use: [
                     'style-loader',
                     'css-loader',
-                    'sass-loader'
-                ]
+                    'sass-loader',
+                ],
             },
             {
                 test: /\.png|svg|jpg|gif$/,

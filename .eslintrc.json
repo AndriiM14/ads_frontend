@@ -1,23 +1,14 @@
 {
     "env": {
-        "browser": true,
-        "es2021": true
+        "browser": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 13,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
+    "extends": "airbnb",
     "rules": {
-        "indent": ["error", 4]
+        // Indent with 4 spaces
+        "indent": ["error", 4],
+        // Indent JSX with 4 spaces
+        "react/jsx-indent": ["error", 4],
+        // Indent props with 4 spaces
+        "react/jsx-indent-props": ["error", 4]
     }
 }
