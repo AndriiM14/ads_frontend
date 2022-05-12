@@ -5,7 +5,17 @@ import showError from '../toast';
 import { changeUser } from '../api/user';
 
 function EditUser({ data, onConfirm, onCancel }) {
-    const [editData, setEditData] = useState({});
+    const [editData, setEditData] = useState({
+        email: '',
+        phone_number: '',
+        firstname: '',
+        lastname: '',
+        country: '',
+        city: '',
+        district: '',
+        address: '',
+        password: '',
+    });
 
     useEffect(() => {
         setEditData({ ...data });
@@ -21,7 +31,7 @@ function EditUser({ data, onConfirm, onCancel }) {
     const handleConfirm = async () => {
         const payload = {};
 
-        if (editData.password) {
+        if (editData.password && editData.password !== '') {
             if (editData.password !== editData.confirm_password) {
                 showError({ message: 'Passwords are not equal!' });
                 return;
@@ -47,7 +57,10 @@ function EditUser({ data, onConfirm, onCancel }) {
         }
     };
 
-    const handleCancel = () => onCancel();
+    const handleCancel = () => {
+        setEditData({ ...data });
+        onCancel();
+    };
 
     return (
         <div className="profile-content">
@@ -69,6 +82,10 @@ function EditUser({ data, onConfirm, onCancel }) {
     );
 }
 
+EditUser.defaultProps = {
+    onCancel: () => {},
+};
+
 EditUser.propTypes = {
     data: PropTypes.shape({
         id: PropTypes.number.isRequired,
@@ -82,7 +99,7 @@ EditUser.propTypes = {
         address: PropTypes.string.isRequired,
     }).isRequired,
     onConfirm: PropTypes.func.isRequired,
-    onCancel: PropTypes.func.isRequired,
+    onCancel: PropTypes.func,
 };
 
 export default EditUser;

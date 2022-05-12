@@ -6,11 +6,12 @@ import UsersManagement from '../screens/usersManagement';
 import BootrstrapContext from '../context/bootstrap';
 import { getBootstrap } from '../api/user';
 import showError from '../toast';
+import Profile from '../screens/profile';
 
 function AppNav() {
-    const [bootrstrap, setBootstrap] = useState({});
+    const [bootstrap, setBootstrap] = useState({});
 
-    const loadBoostrap = async () => {
+    const loadBootstrap = async () => {
         try {
             const res = await getBootstrap();
             setBootstrap(res.data);
@@ -20,11 +21,11 @@ function AppNav() {
     };
 
     useEffect(() => {
-        loadBoostrap();
+        loadBootstrap();
     }, []);
 
     return (
-        <BootrstrapContext.Provider value={{ bootrstrap, setBootstrap }}>
+        <BootrstrapContext.Provider value={{ bootstrap, setBootstrap, loadBootstrap }}>
             <div className="root">
                 <nav className="navigation">
                     <div className="row logo">
@@ -39,12 +40,13 @@ function AppNav() {
                     <div className="row items">
                         <Link to="/app" className="item"><i className="fa fa-home icon" /></Link>
                         <Link to="/app" className="item"><i className="fa fa-pencil-square-o icon" /></Link>
-                        <Link to="/app" className="item"><i className="fa fa-user icon" /></Link>
-                        {bootrstrap.type === 'Moderator' && <Link to="/app/users" className="item"><i className="fa fa-users icon" /></Link>}
+                        <Link to="/app/profile" className="item"><i className="fa fa-user icon" /></Link>
+                        {bootstrap.type === 'Moderator' && <Link to="/app/users" className="item"><i className="fa fa-users icon" /></Link>}
                     </div>
                 </nav>
                 <Routes>
                     <Route path="/" element={<div />} />
+                    <Route path="/profile" element={<Profile />} />
                     <Route path="/users" element={<UsersManagement />} />
                 </Routes>
             </div>

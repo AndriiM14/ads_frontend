@@ -13,7 +13,7 @@ function RootNav() {
     return (
         <HashRouter>
             <Routes>
-                <Route exact path="/" element={token ? <Navigate to="/app" /> : <Navigate to="/login" />} />
+                <Route exact path="/" element={token !== 'null' ? <Navigate to="/app" /> : <Navigate to="/login" />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="registration" element={<Registration />} />
                 <Route path="/app/*" element={<AppNav />} />

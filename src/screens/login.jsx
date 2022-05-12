@@ -3,7 +3,7 @@ import '../../public/sass/index.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import guyImgSrc from '../../public/img/guy_img.svg';
 import auth from '../api/auth';
-import hashAuthData from './utils/hashToken';
+import hashAuthData from '../utils/hashToken';
 import showError from '../toast';
 import TokenContext from '../context/token';
 
