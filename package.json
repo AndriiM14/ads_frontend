@@ -44,6 +44,7 @@
   "homepage": "https://github.com/AndriiM14/ads_frontend#readme",
   "dependencies": {
     "axios": "^0.27.2",
+    "firebase": "^9.8.1",
     "font-awesome": "^4.7.0",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
@@ -54,6 +55,7 @@
     "react-router-dom": "^6.3.0",
     "react-toastify": "^9.0.1",
     "sass": "^1.51.0",
-    "sass-loader": "^12.6.0"
+    "sass-loader": "^12.6.0",
+    "uuid": "^8.3.2"
   }
 }
