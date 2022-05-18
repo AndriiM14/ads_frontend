@@ -8,6 +8,7 @@ import { getBootstrap } from '../api/user';
 import showError from '../toast';
 import Profile from '../screens/profile';
 import Home from '../screens/home';
+import AdPage from '../screens/adPage';
 
 function AppNav() {
     const [bootstrap, setBootstrap] = useState({});
@@ -49,6 +50,9 @@ function AppNav() {
                     <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/users" element={<UsersManagement />} />
+                    <Route path="/ad-page">
+                        <Route path=":id" element={<AdPage />} />
+                    </Route>
                 </Routes>
             </div>
         </BootrstrapContext.Provider>

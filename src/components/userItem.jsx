@@ -4,6 +4,7 @@ import Ripples from 'react-ripples';
 import '../../public/sass/index.scss';
 import { deleteUser } from '../api/user';
 import showError from '../toast';
+import { UserType } from '../utils/types';
 
 function UserItem({
     data,
@@ -42,14 +43,7 @@ function UserItem({
 }
 
 UserItem.propTypes = {
-    data: PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        firstname: PropTypes.string.isRequired,
-        lastname: PropTypes.string.isRequired,
-        country: PropTypes.string.isRequired,
-        city: PropTypes.string.isRequired,
-        address: PropTypes.string.isRequired,
-    }).isRequired,
+    data: UserType.isRequired,
     onSelect: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
 };

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import '../../public/sass/index.scss';
 import showError from '../toast';
 import { changeUser } from '../api/user';
+import { EditUserType } from '../utils/types';
 
 function EditUser({ data, onConfirm, onCancel }) {
     const [editData, setEditData] = useState({
@@ -87,17 +88,7 @@ EditUser.defaultProps = {
 };
 
 EditUser.propTypes = {
-    data: PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        email: PropTypes.string.isRequired,
-        phone_number: PropTypes.string.isRequired,
-        firstname: PropTypes.string.isRequired,
-        lastname: PropTypes.string.isRequired,
-        country: PropTypes.string.isRequired,
-        city: PropTypes.string.isRequired,
-        district: PropTypes.string.isRequired,
-        address: PropTypes.string.isRequired,
-    }).isRequired,
+    data: EditUserType.isRequired,
     onConfirm: PropTypes.func.isRequired,
     onCancel: PropTypes.func,
 };
