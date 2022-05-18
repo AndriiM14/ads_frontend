@@ -7,6 +7,7 @@ import BootrstrapContext from '../context/bootstrap';
 import { getBootstrap } from '../api/user';
 import showError from '../toast';
 import Profile from '../screens/profile';
+import Home from '../screens/home';
 
 function AppNav() {
     const [bootstrap, setBootstrap] = useState({});
@@ -45,7 +46,7 @@ function AppNav() {
                     </div>
                 </nav>
                 <Routes>
-                    <Route path="/" element={<div />} />
+                    <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/users" element={<UsersManagement />} />
                 </Routes>
