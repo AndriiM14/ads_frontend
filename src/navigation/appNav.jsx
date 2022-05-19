@@ -24,7 +24,8 @@ function AppNav() {
     };
 
     useEffect(() => {
-        loadBootstrap();
+        const token = localStorage.getItem('token');
+        if (token !== null && token !== 'null') loadBootstrap();
     }, []);
 
     return (
@@ -40,9 +41,13 @@ function AppNav() {
                     <div className="nav-input" />
                     <div className="row items">
                         <Link to="/app" className="item"><i className="fa fa-home icon" /></Link>
-                        <Link to="/app/edit-ad" className="item"><i className="fa fa-pencil-square-o icon" /></Link>
-                        <Link to="/app/profile" className="item"><i className="fa fa-user icon" /></Link>
-                        {bootstrap.type === 'Moderator' && <Link to="/app/users" className="item"><i className="fa fa-users icon" /></Link>}
+                        {Object.keys(bootstrap).length > 0 ? (
+                            <div>
+                                <Link to="/app/edit-ad" className="item"><i className="fa fa-pencil-square-o icon" /></Link>
+                                <Link to="/app/profile" className="item"><i className="fa fa-user icon" /></Link>
+                                {bootstrap.type === 'Moderator' && <Link to="/app/users" className="item"><i className="fa fa-users icon" /></Link>}
+                            </div>
+                        ) : <div />}
                     </div>
                 </nav>
                 <Routes>

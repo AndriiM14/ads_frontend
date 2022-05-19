@@ -34,7 +34,7 @@ function AdPage() {
         <div>
             <div className="column center">
                 <div className="adv-full-container">
-                    <img className="adv-img" src={advrSrc} alt="Advertisment" />
+                    <img className="adv-img" src={ad.img ? ad.img : advrSrc} alt="Advertisment" />
                     <h3 className="title4">{ad.title}</h3>
                     <div className="row space-between adv-header">
                         <div className="row">

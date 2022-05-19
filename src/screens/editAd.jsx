@@ -46,41 +46,6 @@ function EditAd() {
         if (Object.keys(bootstrap).length > 0) { loadAds(); }
     }, [bootstrap]);
 
-    const handleSelect = (data) => {
-        setSelectedAd(data);
-        setFormData({
-            title: data.title,
-            content: data.content,
-            ad_type_id: data.ad_type_id.toString(),
-        });
-        setImg(data.img);
-    };
-
-    const renderAds = () => ads.map((data) => (
-        <AdItem
-            key={data.id}
-            data={data}
-            onSelect={handleSelect}
-            onDelete={loadAds}
-        />
-    ));
-
-    const createHandler = (field) => ({ target: { value } }) => {
-        setFormData({ ...formData, [field]: value });
-    };
-
-    const handleLoadImg = async ({ target: { files: [loadedImg] } }) => {
-        setImgLoading(true);
-        try {
-            const url = await loadImage(ref(storage, `ads_img/${loadedImg.name} + ${v4()}`), loadedImg);
-            setImg(url);
-        } finally {
-            setImgLoading(false);
-        }
-    };
-
-    const handleClipperClick = () => imgInput.current.click();
-
     const handleCancel = () => {
         setFormData(DEFAULT_FORM_DATA);
         setSelectedAd(null);
@@ -109,6 +74,47 @@ function EditAd() {
 
         loadAds();
     };
+
+    const handleSelect = (data) => {
+        setSelectedAd(data);
+        setFormData({
+            title: data.title,
+            content: data.content,
+            ad_type_id: data.ad_type_id.toString(),
+        });
+        setImg(data.img);
+    };
+
+    const handleDelete = (data) => {
+        if (selectedAd && data.id === selectedAd.id) handleCancel();
+
+        loadAds();
+    };
+
+    const renderAds = () => ads.map((data) => (
+        <AdItem
+            key={data.id}
+            data={data}
+            onSelect={handleSelect}
+            onDelete={handleDelete}
+        />
+    ));
+
+    const createHandler = (field) => ({ target: { value } }) => {
+        setFormData({ ...formData, [field]: value });
+    };
+
+    const handleLoadImg = async ({ target: { files: [loadedImg] } }) => {
+        setImgLoading(true);
+        try {
+            const url = await loadImage(ref(storage, `ads_img/${loadedImg.name} + ${v4()}`), loadedImg);
+            setImg(url);
+        } finally {
+            setImgLoading(false);
+        }
+    };
+
+    const handleClipperClick = () => imgInput.current.click();
 
     return (
         <div>

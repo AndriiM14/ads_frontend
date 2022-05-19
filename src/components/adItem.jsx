@@ -13,7 +13,7 @@ function AdItem({ data, onSelect, onDelete }) {
     const handleDelete = async () => {
         try {
             await deleteAd(id);
-            onDelete();
+            onDelete(data);
         } catch (error) {
             showError();
         }
