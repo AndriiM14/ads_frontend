@@ -37,9 +37,7 @@ function AppNav() {
                             <p className="logo-title">Ads-platform</p>
                         </Link>
                     </div>
-                    <div className="nav-input">
-                        <input className="text-field nav-search" type="text" id="search" name="search" placeholder="Search" />
-                    </div>
+                    <div className="nav-input" />
                     <div className="row items">
                         <Link to="/app" className="item"><i className="fa fa-home icon" /></Link>
                         <Link to="/app/edit-ad" className="item"><i className="fa fa-pencil-square-o icon" /></Link>

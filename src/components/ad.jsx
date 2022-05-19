@@ -14,7 +14,7 @@ function Ad({ data }) {
                     {data.username}
                 </h5>
             </div>
-            <img className="adv-img" src={advrSrc} alt="Advertisment" />
+            <img className="adv-img" src={data.img ? data.img : advrSrc} alt="Advertisment" />
             <div className="adv-content">
                 <div className="row left adv-location">
                     <i className="fa fa-map-marker location-icon" />
