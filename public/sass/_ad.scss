@@ -183,6 +183,18 @@
   }
 }
 
+.attachment {
+  width: 18%;
+  height: 15vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid colors.$primary-900;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2);
+  margin-left: 75px;
+}
+
 @media screen and (max-width: 1300px) {
   .advs-prev {
     width: 40%;
@@ -195,6 +207,10 @@
 
   .adv-full-container {
     width: 70%;
+  }
+
+  .attachment {
+    width: 30%;
   }
 }
 
@@ -215,6 +231,11 @@
 
   .adv-full-container {
     width: 80%;
+  }
+
+  .attachment {
+    width: 45%;
+    margin-top: 10px;
   }
 }
 
@@ -270,5 +291,12 @@
     .adv-header {
       width: 95%;
     }
+  }
+
+  .attachment {
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+    height: 15vh;
   }
 }

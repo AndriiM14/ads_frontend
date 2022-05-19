@@ -8,4 +8,10 @@ export const getAds = (id = null) => {
     return axios.get(`/advertisement${id ? `/${id}` : ''}`, { headers });
 };
 
-export const postAdd = (data) => axios.post('/advertisements', data, { headers: formAuthHeaders() });
+export const getUserAds = (userId) => axios.get(`/advertisements/${userId}`, { headers: formAuthHeaders() });
+
+export const postAd = (data) => axios.post('/advertisements', data, { headers: formAuthHeaders() });
+
+export const changeAd = (id, data) => axios.put(`/advertisement/${id}`, data, { headers: formAuthHeaders() });
+
+export const deleteAd = (id) => axios.delete(`/advertisement${id}`, { headers: formAuthHeaders() });

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Ripples from 'react-ripples';
 import '../../public/sass/index.scss';
 import { deleteUser } from '../api/user';
 import showError from '../toast';
 import { UserType } from '../utils/types';
+import Item from './item';
 
 function UserItem({
     data,
@@ -27,18 +27,11 @@ function UserItem({
     const handleSelect = () => onSelect(data);
 
     return (
-        <Ripples onClick={handleSelect} className="row space-between advs-prev-container">
-            <div className="row">
-                <img className="adv-avatar adv-prev-avatar" src="./img/avatar.png" alt="Avatar pic" />
-                <div className="advs-prev-content">
-                    <h5 className="title5">{`${lastname} ${firstname}`}</h5>
-                    <p className="info">{`${country} ${city} ${address}`}</p>
-                </div>
-            </div>
-            <Ripples onClick={handleDelete} className="delete-user">
-                <i className="fa fa-trash-o icon" />
-            </Ripples>
-        </Ripples>
+        <Item
+            onSelect={handleSelect}
+            onDelete={handleDelete}
+            data={{ title: `${lastname} ${firstname}`, content: `${country} ${city} ${address}` }}
+        />
     );
 }
 
