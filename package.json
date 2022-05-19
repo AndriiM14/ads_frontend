@@ -5,8 +5,10 @@
   "scripts": {
     "start": "webpack serve  --hot --open --port 8000",
     "test": "test",
-    "lint": "eslint ./src/**/*.jsx --ignore-pattern node_modules/",
-    "lint:fix": "eslint ./src/**/*.jsx --fix --ignore-pattern node_modules/"
+    "lint:js": "eslint ./src/**/*.js --ignore-pattern node_modules/",
+    "lint:js:fix": "eslint ./src/**/*.js --fix --ignore-pattern node_modules/",
+    "lint:jsx": "eslint ./src/**/*.jsx --ignore-pattern node_modules/",
+    "lint:jsx:fix": "eslint ./src/**/*.jsx --fix --ignore-pattern node_modules/"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
