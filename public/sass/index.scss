@@ -27,6 +27,11 @@
   display: none;
 }
 
+.loader {
+  width: 100%;
+  background: transparent;
+}
+
 @media screen and (max-width: 600px) {
   .root {
     padding-top: 49px;

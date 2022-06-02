@@ -5,8 +5,10 @@
   "scripts": {
     "start": "webpack serve  --hot --open --port 8000",
     "test": "test",
-    "lint": "eslint ./src/**/*.jsx --ignore-pattern node_modules/",
-    "lint:fix": "eslint ./src/**/*.jsx --fix --ignore-pattern node_modules/"
+    "lint:js": "eslint ./src/**/*.js --ignore-pattern node_modules/",
+    "lint:js:fix": "eslint ./src/**/*.js --fix --ignore-pattern node_modules/",
+    "lint:jsx": "eslint ./src/**/*.jsx --ignore-pattern node_modules/",
+    "lint:jsx:fix": "eslint ./src/**/*.jsx --fix --ignore-pattern node_modules/"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
@@ -44,15 +46,18 @@
   "homepage": "https://github.com/AndriiM14/ads_frontend#readme",
   "dependencies": {
     "axios": "^0.27.2",
+    "firebase": "^9.8.1",
     "font-awesome": "^4.7.0",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-js-loader": "^0.1.0",
     "react-ripples": "^2.2.1",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "react-toastify": "^9.0.1",
     "sass": "^1.51.0",
-    "sass-loader": "^12.6.0"
+    "sass-loader": "^12.6.0",
+    "uuid": "^8.3.2"
   }
 }

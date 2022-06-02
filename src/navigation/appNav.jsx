@@ -4,9 +4,12 @@ import '../../public/sass/index.scss';
 import 'font-awesome/css/font-awesome.min.css';
 import UsersManagement from '../screens/usersManagement';
 import BootrstrapContext from '../context/bootstrap';
-import { getBootstrap } from '../api/user';
 import showError from '../toast';
 import Profile from '../screens/profile';
+import Home from '../screens/home';
+import AdPage from '../screens/adPage';
+import EditAd from '../screens/editAd';
+import { getBootstrap } from '../api/user';
 
 function AppNav() {
     const [bootstrap, setBootstrap] = useState({});
@@ -21,7 +24,8 @@ function AppNav() {
     };
 
     useEffect(() => {
-        loadBootstrap();
+        const token = localStorage.getItem('token');
+        if (token !== null && token !== 'null') loadBootstrap();
     }, []);
 
     return (
@@ -34,20 +38,26 @@ function AppNav() {
                             <p className="logo-title">Ads-platform</p>
                         </Link>
                     </div>
-                    <div className="nav-input">
-                        <input className="text-field nav-search" type="text" id="search" name="search" placeholder="Search" />
-                    </div>
+                    <div className="nav-input" />
                     <div className="row items">
                         <Link to="/app" className="item"><i className="fa fa-home icon" /></Link>
-                        <Link to="/app" className="item"><i className="fa fa-pencil-square-o icon" /></Link>
-                        <Link to="/app/profile" className="item"><i className="fa fa-user icon" /></Link>
-                        {bootstrap.type === 'Moderator' && <Link to="/app/users" className="item"><i className="fa fa-users icon" /></Link>}
+                        {Object.keys(bootstrap).length > 0 ? (
+                            <div>
+                                <Link to="/app/edit-ad" className="item"><i className="fa fa-pencil-square-o icon" /></Link>
+                                <Link to="/app/profile" className="item"><i className="fa fa-user icon" /></Link>
+                                {bootstrap.type === 'Moderator' && <Link to="/app/users" className="item"><i className="fa fa-users icon" /></Link>}
+                            </div>
+                        ) : <div />}
                     </div>
                 </nav>
                 <Routes>
-                    <Route path="/" element={<div />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/edit-ad" element={<EditAd />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/users" element={<UsersManagement />} />
+                    <Route path="/ad-page">
+                        <Route path=":id" element={<AdPage />} />
+                    </Route>
                 </Routes>
             </div>
         </BootrstrapContext.Provider>
