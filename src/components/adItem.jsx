@@ -7,7 +7,7 @@ import showError from '../toast';
 
 function AdItem({ data, onSelect, onDelete }) {
     const {
-        id, title, content, creation_date: date,
+        id, title, creation_date: date,
     } = data;
 
     const handleDelete = async () => {
@@ -25,7 +25,7 @@ function AdItem({ data, onSelect, onDelete }) {
         <Item
             onSelect={handleSelect}
             onDelete={handleDelete}
-            data={{ title, content: `${date} ${content.substring(0, 128)}...` }}
+            data={{ title, content: date }}
         />
     );
 }
