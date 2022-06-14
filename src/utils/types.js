@@ -9,6 +9,10 @@ export const AdType = PropTypes.shape({
     title: PropTypes.string.isRequired,
     user_id: PropTypes.number,
     username: PropTypes.string,
+    likes: PropTypes.number,
+    dislikes: PropTypes.number,
+    liked: PropTypes.bool,
+    disliked: PropTypes.bool,
 });
 
 export const UserType = PropTypes.shape({

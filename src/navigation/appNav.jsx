@@ -41,13 +41,9 @@ function AppNav() {
                     <div className="nav-input" />
                     <div className="row items">
                         <Link to="/app" className="item"><i className="fa fa-home icon" /></Link>
-                        {Object.keys(bootstrap).length > 0 ? (
-                            <div>
-                                <Link to="/app/edit-ad" className="item"><i className="fa fa-pencil-square-o icon" /></Link>
-                                <Link to="/app/profile" className="item"><i className="fa fa-user icon" /></Link>
-                                {bootstrap.type === 'Moderator' && <Link to="/app/users" className="item"><i className="fa fa-users icon" /></Link>}
-                            </div>
-                        ) : <div />}
+                        {Object.keys(bootstrap).length > 0 && <Link to="/app/edit-ad" className="item"><i className="fa fa-pencil-square-o icon" /></Link>}
+                        {Object.keys(bootstrap).length > 0 && <Link to="/app/profile" className="item"><i className="fa fa-user icon" /></Link>}
+                        {Object.keys(bootstrap).length > 0 && bootstrap.type === 'Moderator' && <Link to="/app/users" className="item"><i className="fa fa-users icon" /></Link>}
                     </div>
                 </nav>
                 <Routes>
