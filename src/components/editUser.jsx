@@ -65,7 +65,7 @@ function EditUser({ data, onConfirm, onCancel }) {
 
     return (
         <div className="profile-content">
-            <input onChange={createHandler('email')} value={editData.email} className="text-field" type="email" id="email" name="email" placeholder="Enter email" />
+            <input data-testid="email" onChange={createHandler('email')} value={editData.email} className="text-field" type="email" id="email" name="email" placeholder="Enter email" />
             <input onChange={createHandler('phone_number')} value={editData.phone_number} className="text-field" type="number" id="phone" name="phone" placeholder="Enter phone number" />
             <input onChange={createHandler('firstname')} value={editData.firstname} className="text-field" type="text" id="firstname" name="firstname" placeholder="Enter firstname" />
             <input onChange={createHandler('lastname')} value={editData.lastname} className="text-field" type="text" id="lastname" name="lastname" placeholder="Enter lastname" />
@@ -76,8 +76,8 @@ function EditUser({ data, onConfirm, onCancel }) {
             <input onChange={createHandler('password')} className="text-field" type="password" id="password" name="password" placeholder="Password" />
             <input onChange={createHandler('confirm_password')} className="text-field" type="password" id="confirnm-password" name="confirm-password" placeholder="Confirm Password" />
             <div className="row center space-between">
-                <button onClick={handleCancel} className="secondary-button profile-button" type="submit">Cancel</button>
-                <button onClick={handleConfirm} className="primary-button profile-button" type="submit">Confirm</button>
+                <button data-testid="cancel" onClick={handleCancel} className="secondary-button profile-button" type="submit">Cancel</button>
+                <button data-testid="confirm" onClick={handleConfirm} className="primary-button profile-button" type="submit">Confirm</button>
             </div>
         </div>
     );

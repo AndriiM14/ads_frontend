@@ -10,7 +10,7 @@ function Ad({ data }) {
         <div className="adv-container">
             <div className="row adv-header">
                 <img className="adv-avatar" src={avatarSrc} alt="Avatar pic" />
-                <h5 className="title5">
+                <h5 data-testid="username" className="title5">
                     {data.username}
                 </h5>
             </div>
@@ -18,11 +18,11 @@ function Ad({ data }) {
             <div className="adv-content">
                 <div className="row left adv-location">
                     <i className="fa fa-map-marker location-icon" />
-                    <p className="body">
+                    <p data-testid="location" className="body">
                         {data.location}
                     </p>
                 </div>
-                <h3 className="title4">
+                <h3 data-testid="title" className="title4">
                     {data.title}
                 </h3>
                 <p className="body">
@@ -30,7 +30,7 @@ function Ad({ data }) {
                     {'  '}
                     <Link to={`/app/ad-page/${data.id}`} className="link">{'Read more>>'}</Link>
                 </p>
-                <p className="info adv-date">
+                <p data-testid="creation_date" className="info adv-date">
                     {data.creation_date}
                 </p>
             </div>

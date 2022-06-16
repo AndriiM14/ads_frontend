@@ -9,15 +9,15 @@ function Item({
     onDelete,
 }) {
     return (
-        <Ripples onClick={onSelect} className="row space-between advs-prev-container">
+        <Ripples data-testid="select" onClick={onSelect} className="row space-between advs-prev-container">
             <div className="row">
                 <img className="adv-avatar adv-prev-avatar" src="./img/avatar.png" alt="Avatar pic" />
                 <div className="advs-prev-content">
-                    <h5 className="title5">{title}</h5>
-                    <p className="info">{content}</p>
+                    <h5 data-testid="title" className="title5">{title}</h5>
+                    <p data-testid="content" className="info">{content}</p>
                 </div>
             </div>
-            <Ripples onClick={onDelete} className="delete-user">
+            <Ripples data-testid="remove" onClick={onDelete} className="delete-user">
                 <i className="fa fa-trash-o icon" />
             </Ripples>
         </Ripples>
